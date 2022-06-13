@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5A5A6E"
+    tools:context=".Activity.PlayMusicActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_24" />
+
+    <TextView
+        android:id="@+id/tvPlayArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="176dp"
+        android:text="가수"
+        android:textColor="#C8C8C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="제목"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#E6E6E6"
+        app:layout_constraintEnd_toEndOf="@+id/tvPlayArtist"
+        app:layout_constraintStart_toStartOf="@+id/tvPlayArtist"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayArtist" />
+
+    <ImageView
+        android:id="@+id/ivPlayAlbumArt"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvPlayTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvPlayTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayTitle"
+        app:srcCompat="@drawable/music_video_24" />
+
+    <TextView
+        android:id="@+id/tvStartDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:text="00:00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayAlbumArt" />
+
+    <TextView
+        android:id="@+id/tvEndDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:text="00:00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayAlbumArt" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayAlbumArt" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPrevSong"
+        app:layout_constraintEnd_toStartOf="@+id/ivNextSong"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivPrevSong"
+        app:layout_constraintTop_toTopOf="@+id/ivPrevSong"
+        app:srcCompat="@drawable/play_24" />
+
+    <ImageView
+        android:id="@+id/ivPrevSong"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivPlay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:srcCompat="@drawable/prev_24" />
+
+    <ImageView
+        android:id="@+id/ivNextSong"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay"
+        app:srcCompat="@drawable/next_24" />
+
+    <ImageView
+        android:id="@+id/ivLove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivPlayAlbumArt"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayAlbumArt"
+        app:srcCompat="@drawable/empty_heart" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카운트"
+        app:layout_constraintStart_toStartOf="@+id/ivPlayAlbumArt"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayAlbumArt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
